@@ -11,7 +11,7 @@ int main()
     int counter=0;
     while(true)
     {
-        cube cube1 = source.rotateZ(deg*(counter++)).rotateY(deg*(counter++));
+        cube cube1 = source.rotateY(deg*(counter++)).rotateZ(deg*(counter++));
         cube1.screen_projection().show();
         sleep(1/sleep_time);
     }
@@ -22,7 +22,7 @@ int main()
 // {
 //     system("clear");
 //     cube source(L/2);
-//     source.rotateZ(30).screen_projection().show();
+//     source.rotateX(30).screen_projection().smooth().show();
    
 //     return 0;
 // }

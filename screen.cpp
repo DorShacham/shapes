@@ -45,3 +45,21 @@ void screen::show() const
         cout << endl;
     }
 }
+
+screen screen::smooth() const
+{
+    screen smooth_screen;
+    int r = 1; // smooth radius
+    double local_sum = 0;
+    for(int y=r; y<Y-r; y++)
+        for(int z=r; z<Z-r; z++)
+            {
+                local_sum = 0;
+                for(int i=y-r; i<=y+r;i++)
+                    for(int j=z-r; j<=z+r; j++)
+                        local_sum += matrix[i][j];
+                smooth_screen.matrix[y][z] = local_sum / ((1+2*r)*(1+2*r));
+                smooth_screen.max_val = (smooth_screen.matrix[y][z] > smooth_screen.max_val) ? smooth_screen.matrix[y][z] : smooth_screen.max_val;
+            }
+    return smooth_screen;
+}

@@ -18,4 +18,5 @@ class screen
     char symbol_table[SYMBOL] = {'.',',','-','~',':',';','=','!','*','#','$','@'};
     void show() const;
     char bright2char(double bright) const;
+    screen smooth() const;
 };
