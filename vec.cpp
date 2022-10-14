@@ -132,5 +132,5 @@ double vec::norm() const
     double sum = 0;
     for(int i=0; i<D; i++)
         sum += array[i]*array[i];
-    return sum;
+    return sqrt(sum);
 }
