@@ -36,7 +36,6 @@ void screen::show() const
     char *print_string = new char[Y * Z * 4];
     int counter = 0;
     // moving the cursor to the beginning of the screen
-    char commant_str[BUFFER] = {0};
     printf("\033[%dA\033[%dD", Z + 5, Y);
     for (int z = 0; z < Z; z++)
     {

@@ -12,7 +12,7 @@ int main()
     while(true)
     {
         cube cube1 = source.rotateY(deg*(counter++)).rotateZ(deg*(counter++));
-        cube1.screen_projection().continues().show();
+        cube1.screen_projection().show();
         usleep(sleep_time);
     }
     return 0;

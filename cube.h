@@ -7,8 +7,9 @@
 #include "header.h"
 #include "vec.h"
 #include "screen.h"
+#include "shape.h"
 
-class cube
+class cube : public shape
 {
 private:
     std::array<std::array<std::array<vec,Z>,Y>,X> &space;
