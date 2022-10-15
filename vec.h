@@ -1,6 +1,5 @@
 #ifndef _VEC
 #define _VEC
-#endif
 
 #include "header.h"
 
@@ -33,3 +32,5 @@ class vec{
     bool in_space();
     double norm() const;
 };
+
+#endif

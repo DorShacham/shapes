@@ -5,9 +5,6 @@ shape::shape() : space(*(new std::array<std::array<std::array<vec, Z>, Y>, X>))
    
 }
 
-shape::shape(std::array<std::array<std::array<vec, Z>, Y>, X> &space) : space(space)
-{
-}
 
 shape::shape(const shape &source) : space(*(new std::array<std::array<std::array<vec, Z>, Y>, X>))
 {
@@ -58,7 +55,7 @@ screen shape::screen_projection() const
 shape shape::rotate(double degree, axis w) const
 {
     // move shape to center
-    std::array<std::array<std::array<vec, Z>, Y>, X> &new_space = *new std::array<std::array<std::array<vec, Z>, Y>, X>;
+    shape new_shape;
 
     for (int x = 0; x < X; x++)
         for (int y = 0; y < Y; y++)
@@ -70,10 +67,10 @@ shape shape::rotate(double degree, axis w) const
                     vec new_normal = space[x][y][z].rotate(degree, w);
 
                     if (new_position.in_space())
-                        new_space[round(new_position.array[0])][round(new_position.array[1])][round(new_position.array[2])] = new_normal;
+                        new_shape.space[round(new_position.array[0])][round(new_position.array[1])][round(new_position.array[2])] = new_normal;
                 }
             }
-    return shape(new_space);
+    return new_shape;
 }
 
 shape shape::rotateX(double degree) const

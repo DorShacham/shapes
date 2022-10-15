@@ -1,6 +1,5 @@
 #ifndef _SCREEN
 #define _SCREEN
-#endif
 
 #include "header.h"
 
@@ -22,3 +21,6 @@ class screen
     screen continues() const;
 
 };
+
+
+#endif

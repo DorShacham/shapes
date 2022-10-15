@@ -1,6 +1,5 @@
 #ifndef _SHAPE
 #define _SHAPE
-#endif
 
 
 
@@ -10,7 +9,7 @@
 
 class shape
 {
-private:
+protected:
     std::array<std::array<std::array<vec,Z>,Y>,X> &space;
     int center_x = round(X / 2);
     int center_y = round(Y / 2);
@@ -19,7 +18,6 @@ private:
 
 public:
     shape();
-    shape(std::array<std::array<std::array<vec,Z>,Y>,X> &space);
     shape(const shape &source);
     shape& operator=(const shape &source);
     ~shape() {delete &space;};
@@ -30,3 +28,4 @@ public:
     shape rotateZ(double degree) const;
 };
 
+#endif

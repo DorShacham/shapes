@@ -1,6 +1,5 @@
 #ifndef _HEADER
 #define _HEADER
-#endif
 
 #define L 40
 #define X L
@@ -16,3 +15,4 @@
 #include <array>
 #include <unistd.h>
 
+#endif
