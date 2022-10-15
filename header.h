@@ -2,12 +2,12 @@
 #define _HEADER
 #endif
 
-#define L 50
+#define L 40
 #define X L
 #define Y L
 #define Z L
 #define D 3
-#define SYMBOL 12
+#define SYMBOL 13
 #define PI 3.14159265358979323846
 #define BUFFER 30
 

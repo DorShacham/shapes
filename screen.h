@@ -15,8 +15,10 @@ class screen
     ~screen() {delete &matrix;}
     double max_val=0;
     double min_val=0;
-    char symbol_table[SYMBOL] = {'.',',','-','~',':',';','=','!','*','#','$','@'};
+    char symbol_table[SYMBOL] = {' ','.',',','-','~',':',';','=','!','*','#','$','@'};
     void show() const;
     char bright2char(double bright) const;
     screen smooth() const;
+    screen continues() const;
+
 };
