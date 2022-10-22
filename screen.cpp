@@ -23,6 +23,7 @@ screen &screen::operator=(const screen &source)
     for (int y = 0; y < Y; y++)
         for (int z = 0; z < Z; z++)
             matrix[y][z] = source.matrix[y][z];
+    return *this;
 }
 
 char screen::bright2char(double bright) const
