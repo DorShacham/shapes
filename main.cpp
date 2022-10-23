@@ -22,9 +22,16 @@ int main()
 // int main()
 // {
 //     system("clear");
-//     torus source(L/4,L/6);
-//     source.rotateY(90).screen_projection().show();
-//     // source.rotateX(30).screen_projection().smooth().show();
-   
+//     cube source(L/2);
+
+//     double deg = 1;
+//     unsigned int sleep_time = 5; //microsecond
+//     int counter=0;
+//     while(true)
+//     {
+//         cube cube1 = source.rotateY(2*deg*(counter++)).rotateZ(deg*(counter++));
+//         cube1.screen_projection().continues().show();
+//         usleep(sleep_time);
+//     }
 //     return 0;
 // }

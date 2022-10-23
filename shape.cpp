@@ -19,6 +19,7 @@ shape &shape::operator=(const shape &source)
         for (int y = 0; y < Y; y++)
             for (int z = 0; z < Z; z++)
                 space[x][y][z] = source.space[x][y][z];
+    return *this;
 }
 
 screen shape::screen_projection() const
@@ -34,13 +35,9 @@ screen shape::screen_projection() const
                 if (!space[x][y][z].is_zero())
                 {
                     double product = space[x][y][z] * normal; // may need to divaide by r^2
-                    // if((product < 1) && (product > 0))
-                    // {
-                    //     std::cout << "hello";
-                    // }
-                   
+                    
                     if (product < 0)
-                        product = 0;
+                        product = -product;
 
                     screen.matrix[y][z] = product;
                     screen.max_val = (product > screen.max_val) ? product : screen.max_val;

@@ -24,6 +24,7 @@ vec &vec::operator=(const vec &second_vec)
 {
     for (int i = 0; i < 3; i++)
         array[i] = second_vec.array[i];
+    return *this;
 }
 
 bool vec::is_zero()
